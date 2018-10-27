@@ -36,6 +36,4 @@ fi
 
 git clone https://github.com/c9/core.git c9
 ./c9/scripts/install-sdk.sk
-mkdir workspaces
-ln -s /opt/mycroft/skills workspaces/mycroft-skills
 
