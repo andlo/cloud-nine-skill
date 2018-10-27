@@ -1,0 +1,4 @@
+[submodule "fallback-unknown"]
+	path = c9
+	url = https://github.com/c9/core.git c9sdk.git
+
