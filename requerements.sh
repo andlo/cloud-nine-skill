@@ -5,6 +5,8 @@
 
 #detect distribution using lsb_release (may be replaced parsing /etc/*release)
 dist=$(lsb_release -ds)
+dependencies=( nodejs tmux mc )
+pm="apt -y install"
 
 #setting dependencies and package manager in relation to the distribution
 
