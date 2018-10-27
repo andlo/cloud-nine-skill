@@ -14,13 +14,13 @@ else
     priv="sudo"
     if [ "$dist"  == "\"Arch Linux\""  ]; then
         pm="pacman -S"
-        dependencies=( aaa )
+        dependencies=( "nodejs", "tmux" )
     elif [[ "$dist" =~  "Ubuntu" ]] || [[ "$dist" =~ "Debian" ]] ||[[ "$dist" =~ "Raspbian" ]]; then
-        pm="apt -y install "
-        dependencies=( "nodejs", "tmux", "mc")
+        pm="apt -y install"
+        dependencies=( "nodejs", "tmux", "mc" )
     elif [[ "$dist" =~ "SUSE" ]]; then 
         pm="zypper install"
-        dependencies=( ccc )
+        dependencies=( "nodejs", "tmux" )
     fi
 fi
 
