@@ -8,9 +8,9 @@ class CloudNine(MycroftSkill):
         MycroftSkill.__init__(self)
         
     def initialize(self):
-        os.system("/opt/mycroft/skills/cloud-nine-skill.andlo/c9/scripts/install-sdk.sh")
+        #os.system("/opt/mycroft/skills/cloud-nine-skill.andlo/c9/scripts/install-sdk.sh")
         command = "/opt/mycroft/skills/cloud-nine-skill.andlo/c9/server.js -p 8080 -w workspace -l 0.0.0.0 -a :"
-        run(command.split(command)
+        run(command.split(command))
 
     @intent_file_handler('nine.cloud.intent')
     def handle_nine_cloud(self, message):
@@ -20,7 +20,4 @@ class CloudNine(MycroftSkill):
 def create_skill():
     return CloudNine()
     
-def bash(command):
-        run(command.split())
-
     
