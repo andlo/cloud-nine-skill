@@ -7,10 +7,10 @@ class CloudNine(MycroftSkill):
         MycroftSkill.__init__(self)
 
     def initialize(self):
-        SafePath = "/home/pi"
+        #SafePath = "/home/pi"
+        SafePath = self.file_system
         AppPath = self._dir
         if self.settings.get('c9 installed') == None:
-            #os.system("git clone https://github.com/c9/core.git /c9")
             Repo.clone_from("https://github.com/c9/core.git", AppPath + '/c9')
             os.system(AppPath + '/c9/scripts/install-sdk.sh')
             os.makedirs(SafePath + '/workspace')
