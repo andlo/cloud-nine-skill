@@ -12,16 +12,16 @@ class CloudNine(MycroftSkill):
         AppPath = self._dir
         if self.settings.get('c9 installed') == None:
             self.log.info("Cloning c9.core from github. This takes some time....")
-            Repo.clone_from("https://github.com/c9/core.git", AppPath + '/c9')
+            Repo.clone_from("https://github.com/c9/core.git", SafePath + '/c9')
             self.log.info("Setting up c9.core. This will take some time to....")
-            os.system(AppPath + '/c9/scripts/install-sdk.sh')
+            os.system(SafePath + '/c9/scripts/install-sdk.sh')
             self.log.info("Setting up workspace.")
             os.makedirs(SafePath + '/workspace')
             os.symlink('/opt/mycroft/skills', SafePath + '/workspace/Mycroft-skills')
             self.settings['c9 installed'] = 'True'
             self.log.info("c9.core is installed and configured")
         self.log.info("Starting c9.core")
-        os.system(AppPath + '/c9/server.js -p 8080 -w ' + SafePath + '/workspace -l 0.0.0.0 -a :')
+        os.system(SafePath + '/c9/server.js -p 8080 -w ' + SafePath + '/workspace -l 0.0.0.0 -a :')
 
     @intent_file_handler('nine.cloud.intent')
     def handle_nine_cloud(self, message):
