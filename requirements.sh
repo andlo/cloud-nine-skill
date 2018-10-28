@@ -14,13 +14,13 @@ else
     priv="sudo"
     if [ "$dist"  == "\"Arch Linux\""  ]; then
         pm="pacman -S"
-        dependencies=( odejs tmux sqlite3)
+        dependencies=( nodejs tmux sqlite3 node-sqlite3)
     elif [[ "$dist" =~  "Ubuntu" ]] || [[ "$dist" =~ "Debian" ]] ||[[ "$dist" =~ "Raspbian" ]]; then
         pm="apt install"
-        dependencies=( nodejs tmux sqlite3)
+        dependencies=( nodejs tmux sqlite3 node-sqlite3)
     elif [[ "$dist" =~ "SUSE" ]]; then 
         pm="zypper install"
-        dependencies=( nodejs tmux sqlite3)
+        dependencies=( nodejs tmux sqlite3 node-sqlite3)
     fi
 fi
 
