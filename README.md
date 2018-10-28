@@ -12,8 +12,30 @@ It also includes a fulls shell so using git to push and pull is easyly done. Off
 
 This is a local installation on your devices. So no data or anything to do whith Amazon AWS, Cloud9 and related online services. 
 
+#### How to install Cloud Nine Skill
+Install Cloud Nine skill by …
+```
+msm install https://github.com/andlo/cloud-nine-skill.git
+``` 
+Install will install some exras on your device. That is nodejs, tmux and sqlite.
+Initialazion will take quite some time and includes
+* git download of c9.core
+* compiling c9 node modules and extras
+* setting up workspace
 
-Notise it takes a little time to install. After install you can access cloud9 ide at http://<hostname_of_device>:8080
+Duing install there is a lot of output in the log. It should however endup with the line “Cloud9 is up and running”
+
+##### How to remove Cloud Nine Skill
+Remove Cloud Nine Skill by …
+```
+msm remove cloud-nine
+```
+After that delete /home/pi/.mycroft/skills/CloudNine and subfolders. Also delete /home/pi/,c9 and /home/pi/node-gyp
+and if not needed by other skills
+```
+apt-get remove nodejs tmux sqlite3 node-sqlite3
+```
+
 
 ## Credits 
 Andreas Lorensen (@andlo)
