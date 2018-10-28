@@ -18,7 +18,7 @@ class CloudNine(MycroftSkill):
             self.log.info("Setting up workspace.")
             os.makedirs(SafePath + '/workspace')
             os.symlink('/opt/mycroft/skills', SafePath + '/workspace/Mycroft-skills')
-            self.settings['c9 installed'] = 'True'
+            self.settings['c9 installed'] = "True"
             self.log.info("c9.core is installed and configured")
         self.log.info("Starting c9.core")
         os.system(SafePath + '/c9/server.js -p 8080 -w ' + SafePath + '/workspace -l 0.0.0.0 -a :')
