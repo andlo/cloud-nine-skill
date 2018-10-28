@@ -1,6 +1,9 @@
 # <img src='https://raw.githubusercontent.com/c9/core/master/plugins/c9.ide.theme.flat/images/cloud9_logo%402x.png'  card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> Cloud Nine
 Installs and configure a local Cloud9 IDE
 
+## Initial release
+This skill will install and work, but still needs som love and chnges.
+
 ## About 
 This skill installs and configure a local Cloud9 IDE for use to make, edit and manipulate skills on a Mycroft device.
 
