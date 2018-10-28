@@ -25,7 +25,8 @@ class CloudNine(MycroftSkill):
             self.log.info("c9.core is installed and configured")
         self.log.info("Starting c9.core")
         #os.system(SafePath + '/c9/server.js -p 8080 -w ' + SafePath + '/workspace -l 0.0.0.0 -a :')
-        subprocess.call(SafePath + '/c9/server.js -p 8080 -w ' + SafePath + '/workspace -l 0.0.0.0 -a :')
+        cmd = SafePath + '/c9/server.js -p 8080 -w ' + SafePath + '/workspace -l 0.0.0.0 -a :'
+        subprocess.call(cmd.split())
 
     @intent_file_handler('nine.cloud.intent')
     def handle_nine_cloud(self, message):
