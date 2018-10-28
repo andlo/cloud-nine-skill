@@ -14,8 +14,7 @@ class CloudNine(MycroftSkill):
             os.system('git clone https://github.com/c9/core.git ' + AppPath + '/c9')
             os.system(AppPath + '/c9/scripts/install-sdk.sh')
             self.settings['c9 installed'] = 'True'
-        try:
-            os.system(AppPath + '/c9/server.js -p 8080 -w ' + AppPath + '/workspace -l 0.0.0.0 -a :')
+        os.system(AppPath + '/c9/server.js -p 8080 -w ' + AppPath + '/workspace -l 0.0.0.0 -a :')
         
     @intent_file_handler('nine.cloud.intent')
     def handle_nine_cloud(self, message):
