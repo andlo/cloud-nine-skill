@@ -1,4 +1,4 @@
-# <img src='cloud9_logo@1x.png' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> Cloud Nine
+# <img src="cloud9logo.jpg" card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> Cloud Nine
 Installs and configure a local Cloud9 IDE
 
 ## About 
@@ -6,6 +6,8 @@ This skill installs and configure a local Cloud9 IDE for use to make, edit and m
 
 Cloud9 is a full blown IDE accesable throug a webbrowser. That makes it ideal to make and devolep skills to and on a Mycroft device
 It also includes a fulls shell so using git to push and pull is easyly done. Offcause alsp specifik Mycroft stuff like mycroft-msk can be run directly from here.
+
+This is a local installation on your devices. So no data or anything to do whith Amazon AWS, Cloud9 and related online services. 
 
 
 Notise it takes a little time to install. After install you can access cloud9 ide at http://<hostname_of_device>:8080
