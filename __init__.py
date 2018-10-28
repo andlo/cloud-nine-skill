@@ -1,3 +1,4 @@
+ls
 from mycroft import MycroftSkill, intent_file_handler
 import os
 from git import Repo
@@ -5,12 +6,15 @@ from git import Repo
 class CloudNine(MycroftSkill):
     def __init__(self):
         MycroftSkill.__init__(self)
+        if self.settings.get('c9 installed') == None:
+            self.settings['c9 installed'] = "False"
+            
 
     def initialize(self):
         #SafePath = "/home/pi"
         SafePath = self.file_system.path
         AppPath = self._dir
-        if self.settings.get('c9 installed') == None:
+        if self.settings.get('c9 installed') == "False":
             self.log.info("Cloning c9.core from github. This takes some time....")
             Repo.clone_from("https://github.com/c9/core.git", SafePath + '/c9')
             self.log.info("Setting up c9.core. This will take some time to....")
@@ -24,6 +28,8 @@ class CloudNine(MycroftSkill):
         os.system(SafePath + '/c9/server.js -p 8080 -w ' + SafePath + '/workspace -l 0.0.0.0 -a :')
 
     @intent_file_handler('nine.cloud.intent')
+    
+    
     def handle_nine_cloud(self, message):
         self.speak_dialog('nine.cloud')
 
