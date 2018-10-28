@@ -12,8 +12,6 @@ This is a local installation on your devices. So no data or anything to do whith
 
 Notise it takes a little time to install. After install you can access cloud9 ide at http://<hostname_of_device>:8080
 
-## Examples 
-
 ## Credits 
 Andreas Lorensen (@andlo)
 
@@ -36,4 +34,4 @@ Productivity
 * Setup specifik Mycroft runner to launch mycroft-cli-client inside shell
 * Setup specifik runner to show mycroft logs
 * Adding posibility to userdefined workspases throu home.mycroft.ai setttings
-* 
+* Maybe Mycroft branding - speciel theme or whatever ? 
