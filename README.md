@@ -25,7 +25,7 @@ Initialazion will take quite some time and includes
 
 Duing install there is a lot of output in the log. It should however endup with the line “Cloud9 is up and running”
 
-##### How to remove Cloud Nine Skill
+#### How to remove Cloud Nine Skill
 Remove Cloud Nine Skill by …
 ```
 msm remove cloud-nine
