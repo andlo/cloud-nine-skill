@@ -1,4 +1,4 @@
-# <img src='cloud9_logo.png' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> Cloud Nine
+# <img src='cloud9_logo@1x.png' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> Cloud Nine
 Installs and configure a local Cloud9 IDE
 
 ## About 
