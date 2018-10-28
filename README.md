@@ -18,6 +18,9 @@ Notise it takes a little time to install. After install you can access cloud9 id
 ## Credits 
 Andreas Lorensen (@andlo)
 
+And the nice people at Mycroft and the good comunity around Mycroft. Both is helpfull and inspirating.
+
+
 ## Supported Devices 
 platform_mark1 platform_mark2 platform_picroft 
 
