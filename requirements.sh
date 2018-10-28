@@ -16,7 +16,7 @@ else
         pm="pacman -S"
         dependencies=( nodejs tmux sqlite3 node-sqlite3)
     elif [[ "$dist" =~  "Ubuntu" ]] || [[ "$dist" =~ "Debian" ]] ||[[ "$dist" =~ "Raspbian" ]]; then
-        pm="apt install"
+        pm="apt -y install"
         dependencies=( nodejs tmux sqlite3 node-sqlite3)
     elif [[ "$dist" =~ "SUSE" ]]; then 
         pm="zypper install"
