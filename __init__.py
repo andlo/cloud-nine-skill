@@ -1,6 +1,7 @@
 from mycroft import MycroftSkill, intent_file_handler
 import os
 from git import Repo
+import subprocess
 
 class CloudNine(MycroftSkill):
     def __init__(self):
@@ -23,7 +24,8 @@ class CloudNine(MycroftSkill):
             self.settings['c9 installed'] = "True"
             self.log.info("c9.core is installed and configured")
         self.log.info("Starting c9.core")
-        os.system(SafePath + '/c9/server.js -p 8080 -w ' + SafePath + '/workspace -l 0.0.0.0 -a :')
+        #os.system(SafePath + '/c9/server.js -p 8080 -w ' + SafePath + '/workspace -l 0.0.0.0 -a :')
+        subprocess.call(SafePath + '/c9/server.js -p 8080 -w ' + SafePath + '/workspace -l 0.0.0.0 -a :')
 
     @intent_file_handler('nine.cloud.intent')
     def handle_nine_cloud(self, message):
